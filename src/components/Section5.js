@@ -1,17 +1,34 @@
 import React from "react";
+import { motion, easeInOut } from "framer-motion";
+import { ReactTyped as Typed } from "react-typed";
 
 const Section5 = () => {
     return (
         <div className="flex flex-col justify-center items-center h-full w-full mt-24 p-12">
-            <h1 className="text-4xl sm:text-6xl text-primary font-jost font-bold text-center mt-8">Retrouvez-nous</h1>
+            <motion.h1 
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: easeInOut }} 
+                className="text-4xl sm:text-6xl text-primary font-jost font-bold text-center mt-8">
+                Retrouvez-nous
+            </motion.h1>
             <div className="flex flex-col sm:grid sm:grid-cols-2 gap-8 mt-12 sm:mt-32 mb-12">
-                <p className="sm:place-self-end text-2xl sm:text-3xl text-accent font-jost font-semibold sm:text-end text-center">
-                    La Boulangerie,<br />
-                    Av. Gustave Eiffel,<br />
-                    75007 Paris<br /><br />
-                    06 07 08 09 01<br /><br />
-                    LaBoulangerie@lebonpain.com
-                </p>
+                <Typed
+                    strings={[
+                        `La Boulangerie,<br />
+                        Av. Gustave Eiffel,<br />
+                        75007 Paris<br /><br />
+                        06 07 08 09 01<br /><br />
+                        LaBoulangerie@lebonpain.com`
+                    ]}
+                    typeSpeed={15}
+                    backSpeed={20}
+                    backDelay={1500}
+                    startDelay={1000}
+                    loop={false}
+                    showCursor={true}
+                    className="sm:place-self-end text-2xl sm:text-3xl text-accent font-jost font-semibold sm:text-end text-center"
+                />
                 <div className="place-self-center sm:place-self-start">
                     <iframe
                         title="La Boulangerie Location"
