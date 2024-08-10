@@ -1,62 +1,34 @@
 import React from "react";
-import Baguette from "../assets/baguette.png";
-import Viennoiserie from "../assets/viennoiseries.png";
-import Anniv from "../assets/anniversaire.png";
-import Repas from "../assets/repas.png";
-import Salade from "../assets/Salade.png";
-import Mariage from "../assets/mariage.png";
-import Ble from "../assets/champ.png";
-import { easeInOut } from "framer-motion";
-
-const Data = [
-    {
-        image: Baguette,
-        title: "Du bon pain",
-        description: "Chaque jour, notre pain est pétri et cuit avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-    {
-        image: Viennoiserie,
-        title: "Nos délices",
-        description: "Chaque jour, nos viennoiseries sont façonnées et cuites avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-    {
-        image: Anniv,
-        title: "Nos gâteaux",
-        description: "Chaque jour, nos pâtisseries sont confectionnées avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-    {
-        image: Repas,
-        title: "De bons sandwichs",
-        description: "Chaque jour, nos sandwichs sont préparés avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-    {
-        image: Salade,
-        title: "Nos salades fraîches",
-        description: "Chaque jour, nos salades sont préparées avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-    {
-        image: Mariage,
-        title: "Vos commandes",
-        description: "Chaque jour, vos commandes spéciales sont réalisées avec le plus grand soin, garantissant une qualité et une fraîcheur incomparables. Découvrez le goût authentique de notre savoir-faire artisanal."
-    },
-];
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faMapMarkerAlt, faHandsPraying } from '@fortawesome/free-solid-svg-icons';
 
 const Section4 = () => {
     return (
-        <div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{opacity: 1, y:0 }}
-        transition={{ duration: 1, ease:easeInOut }} 
-        className="bg-cover bg-center min-h-screen" style={{ backgroundImage: `url(${Ble})`, backgroundPositionY: "top" }}>
-            <div className="grid grid-cols-1 xl:grid-cols-3 h-full mt-32 sm:mt-48">
-                {Data.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center justify-center h-full w-auto bg-black bg-opacity-50 p-12">
-                        <img src={item.image} alt={item.title} className="sm:w-[70%] sm:h-[40%] object-cover rounded-lg" />
-                        <h1 className="text-3xl sm:text-6xl text-primary font-jost font-bold text-center mt-8">{item.title}</h1>
-                        <p className="text-accent font-jost text-xl sm:text-2xl mt-12 font-semibold max-w-[60%] text-center">{item.description}</p>
-                    </div>
-                ))}
+        <div className="mt-8 mb-20">
+        <h1 className="text-2xl md:text-6xl font-kanit font-bold text-primary text-center ">QUE POUVONS-NOUS FAIRE POUR VOUS ?</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="flex flex-col gap-y-6 items-center justify-center mt-16">
+            <div className="size-48 lg:size-80 bg-[#8BA2E0] rounded-full relative">
+            <FontAwesomeIcon icon={faHandsPraying} className="size-16 lg:size-28 absolute top-[35%] left-[33%]" />
             </div>
+            <button className="py-2 px-4 font-semibold font-kanit text-white bg-[#394040] rounded-lg">Intention de prière</button>
+
+        </div>
+        <div className="flex flex-col gap-y-6 items-center justify-center mt-16">
+            <div className="size-48 lg:size-80 bg-[#A7CCAD] rounded-full relative">
+            <FontAwesomeIcon icon={faCalendar} className="size-16 lg:size-28 absolute top-[35%] left-[33%]" />
+            </div>
+            <button className="py-2 px-4 font-semibold font-kanit text-white bg-[#394040] rounded-lg">Prendre un rendez-vous</button>
+
+        </div>
+        <div className="flex flex-col gap-y-6 items-center justify-center mt-16">
+            <div className="size-48 lg:size-80 bg-[#F09878] rounded-full relative">
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="size-16 lg:size-28 absolute top-[35%] left-[33%]" />
+            </div>
+            <button className="py-2 px-4 font-semibold font-kanit text-white bg-[#394040] rounded-lg">Visiter l'église</button>
+
+        </div>
+        </div>
         </div>
     );
 };

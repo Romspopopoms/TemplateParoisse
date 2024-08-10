@@ -1,62 +1,23 @@
 import React from "react";
-import { easeInOut, motion } from "framer-motion";
-import Photo1 from "../assets/Photo1.jpeg";
-import Pain from "../assets/pain.png";
-import Sandwich from "../assets/sandwich.png";
-import Gâteau from "../assets/gateau.png";
-import croissant from "../assets/croissant.png";
-
-const Bouffe = [
-    {
-        name: "Pain",
-        image: Pain
-    },
-    {
-        name: "Sandwich",
-        image: Sandwich
-    },
-    {
-        name: "Gâteau",
-        image: Gâteau
-    },
-    {
-        name: "Viennoiserie",
-        image: croissant
-    },
-];
+import background from "../assets/bgSection1.png";
+import Pointille from "../assets/Pointillé.png";
 
 const Section1 = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-96 w-auto">
-            
-            <img src={Photo1} alt="Photo1" className="absolute inset-0 w-full blur-sm z-0 min-h-96" />
-            <motion.h1 
-            initial={{ opacity: 0, y: 100 }}
-            animate={{opacity: 1, y:0 }}
-            transition={{ duration: 1, ease:easeInOut }}
-            className="z-10 self-start xl:ml-32 xl:mt-32 mt-12 ml-8 font-jost text-2xl md:text-4xl lg:text-6xl font-bold text-white"
-            >LA BOULANGERIE</motion.h1>
-            
-            <motion.h2 
-            initial={{ opacity: 0, y: 100 }}
-            animate={{opacity: 1, y:0 }}
-            transition={{ duration: 1, ease:easeInOut, delay:0.3 }}
-            className="z-10 self-start xl:ml-32 mt-4 ml-8 font-jost text-2xl sm:text-4xl font-bold text-white">L'art de la boulangerie française à votre portée</motion.h2>
-            <motion.div 
-            initial={{ opacity: 0, y: 100 }}
-            animate={{opacity: 1, y:0 }}
-            transition={{ duration: 1, ease:easeInOut }}
-            className=" hidden sm:flex z-10 xl:mt-56 mt-16 xl:space-x-28 space-x-14 flex-wrap">
-                {Bouffe.map((item, index) => {
-                    return (
-                        <div key={index} className="flex flex-col items-center justify-center">
-                            <img src={item.image} alt={item.name} className="xl:w-28 w-14 xl:h-28 h-14" />
-                            <p className="text-white font-jost font-bold mt-6">{item.name}</p>
-                            
-                        </div>
-                    );
-                })}
-            </motion.div>
+        <div className="relative flex flex-col items-center justify-center h-screen w-full z-0 mt-16 md:mt-0">
+            <img src={background} alt="fond" className="h-full w-full object-cover brightness-50" />
+            <img src={Pointille} alt="pointillé" className="absolute left-0 object-cover w-[90%] h-[40%] " />
+            <div className="absolute left-8 md:left-16 flex flex-col items-start justify-center px-4">
+                <h1 className="font-bold text-white text-3xl md:text-4xl text-start mb-4">BIENVENUE DANS VOTRE PAROISSE !</h1>
+                <div className="hidden md:flex flex-row gap-4 mt-4">
+                    <button className="bg-white text-[#54B9BC] p-2 md:px-4 rounded-lg font-bold">Horaires des Messes</button>
+                    <button className="bg-white text-[#54B9BC] p-2 md:px-4 rounded-lg font-bold">Inscription au Patronage</button>
+                </div>
+            </div>
+            <div className="flex flex-col gap-4 mt-4 md:hidden absolute bottom-16">
+                <button className="bg-white text-[#54B9BC] p-2 rounded-lg font-bold">Horaires des Messes</button>
+                <button className="bg-white text-[#54B9BC] p-2 rounded-lg font-bold">Inscription au Patronage</button>
+            </div>
         </div>
     );
 };

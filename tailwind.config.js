@@ -11,6 +11,7 @@ module.exports = {
       },
     },
     screens: {
+      xs: '425px',
       sm: '640px',
       md: '768px',
       lg: '960px',
@@ -21,9 +22,11 @@ module.exports = {
         'baloo': ['"Baloo 2"', 'cursive'],
         'roboto': ['Roboto', 'sans-serif'],
         'jost': ['Jost', 'sans-serif'],
+        'kanit': ['Kanit', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       }, // Assurez-vous que le nom correspond exactement à Google Fonts
       colors: {
-        primary: '#A6654E',
+        primary: '#54B9BC',
         accent: '#FFE3CC',
       }
     },

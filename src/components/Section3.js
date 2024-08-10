@@ -1,29 +1,19 @@
 import React from "react";
-import { ReactTyped as Typed } from "react-typed";
-import { easeInOut, motion } from "framer-motion";
+import Eucharistie from "../assets/Eucharistie.png";
 
 const Section3 = () => {
     return (
-        <motion.div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{opacity: 1, y:0 }}
-        transition={{ duration: 1, ease:easeInOut }} 
-        className="flex flex-col items-center justify-center h-full w-auto mt-48 xl:mt-64 bg-black px-4">
-            <h1
-            className="text-4xl sm:text-6xl text-primary font-jost font-bold text-center">Notre engagement</h1>
-            <Typed
-                strings={[
-                    `Notre boulangerie s'engage à soutenir la communauté locale. Nous sélectionnons nos ingrédients auprès de producteurs locaux, favorisant ainsi l'économie régionale. Chaque pain et chaque viennoiserie reflètent notre dévouement à offrir des produits frais et de qualité, tout en réduisant notre empreinte écologique. Ensemble, nous cultivons le goût de l'authenticité et du partage.`
-                ]}
-                typeSpeed={20}
-                backSpeed={20}
-                backDelay={1500}
-                startDelay={1000}
-                loop={false}
-                showCursor={true}
-                className="text-accent font-jost text-xl sm:text-2xl mt-12 font-semibold max-w-[60%] text-center"
+        <div className="flex flex-col items-center justify-center w-full relative h-screen md:h-screen">
+            <img 
+                src={Eucharistie} 
+                alt="Eucharistie" 
+                className="w-full h-full object-cover brightness-50"
             />
-        </motion.div>
+            <h1 className="absolute top-[35%] text-2xl md:text-6xl font-kanit font-bold text-white text-center">
+                VIVEZ L'EUCHARISTIE
+            </h1>
+            <p className="max-w-[70%] absolute md:top-[50%] top-[45%] text-center text-xl xl:text-2xl font-kanit text-white">Venez nous rejoindre à la messe, célébrée chaque jour dans notre paroisse. Nous vous accueillons avec joie pour partager ensemble la prière et la grâce divine.</p>
+        </div>
     );
 };
 
