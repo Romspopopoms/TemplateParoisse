@@ -21,7 +21,7 @@ const Section2 = () => {
                     Ensemble, grandissons dans la foi et l'amour de Dieu !
                 </p>
             </div>
-            <div className="mt-8 flex flex-col py-8 space-y-8 items-center md:items-start">
+            <div className="mt-8 flex flex-col py-8 px-8 space-y-8 items-center md:items-start">
                 <h2 className="font-kanit text-primary font-bold text-3xl xl:text-5xl text-center">UN LIEU POUR VIVRE SA FOI</h2>
                 <div className="flex flex-col gap-4 items-start w-full">
                     <div className="flex flex-col w-full mt-12">
