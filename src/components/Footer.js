@@ -7,7 +7,7 @@ import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg
 const Footer = () => {
     return (
         <div className="relative flex">
-            <img src={BG} alt='background' className="object-cover h-auto md:h-64 w-full" />
+            <img src={BG} alt='background' className="h-96 object-cover md:h-64 w-full" />
             <div className="md:grid md:grid-cols-2 flex flex-col w-full absolute inset-0 p-4">
                 <div className="flex flex-col gap-2">
                     <img src={Logo} alt="Logo" className="max-w-[20%]" />
