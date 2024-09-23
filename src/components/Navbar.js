@@ -42,7 +42,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="fixed w-full h-16 flex items-center z-50 bg-[#54B9BC] md:bg-transparent">
+            className="absolute top-0 w-full h-16 flex items-center z-50 bg-[#54B9BC] md:bg-transparent">
             <a href="/" className="ml-6">
                 <img src={Logo} alt="logo" className="h-8 md:h-12" />
             </a>
